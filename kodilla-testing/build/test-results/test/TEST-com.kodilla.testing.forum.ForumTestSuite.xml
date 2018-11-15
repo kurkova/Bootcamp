@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-11-15T09:10:10" hostname="KURKOVA-KOMP" time="0.002">
+  <properties/>
+  <testcase name="testcaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
+  <testcase name="testCaseUsername" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.0"/>
+  <system-out><![CDATA[The Suite: begin
+The Case: begin
+testingJohn Smith
+The Case: end
+The Case: begin
+TestingtheForumUser
+The Case: end
+The Suite: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
