@@ -9,6 +9,7 @@ public class BookLibrary {
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
     }
+
     public List<Book> listBooksWithCondition(String titleFragment) {
         List<Book> bookList = new ArrayList<Book>();
         Book book = new Book("The book title", "The book author", 2000);
