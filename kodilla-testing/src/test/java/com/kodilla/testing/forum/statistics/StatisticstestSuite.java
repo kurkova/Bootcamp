@@ -11,7 +11,7 @@ import static org.mockito.Mockito.when;
 
 public class StatisticstestSuite {
     @Test
-    public void testCalculateAdvStatistics(){
+    public void testGetaAerageNumberOfPostsPerUser(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersNamesMock = new ArrayList<>();
@@ -27,9 +27,10 @@ public class StatisticstestSuite {
         CalculateStatistics calculateStatistics = new CalculateStatistics(statisticsMock);
 
         //When
-        double result = calculateStatistics.getAverageNumberOfCommentsPerPost();
+        double result = calculateStatistics.calculateAdvSatistics();
 
         //Then
         Assert.assertEquals(0.75,result, 0.001);
     }
 }
+//

@@ -8,7 +8,6 @@ public class ShapeCollector {
         public List<Shape> theShape = new ArrayList<>();
 
         public void addShape(Shape shape) {
-
             theShape.add(shape);
         }
 

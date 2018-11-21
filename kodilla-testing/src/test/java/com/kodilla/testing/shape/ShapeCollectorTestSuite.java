@@ -12,10 +12,12 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddShape() {
 
-        List<Shape> intShape = Arrays.asList("triangle")<>();
+        List<Shape> theShape = new ArrayList<>();
 
-        ShapeCollector shapeCollector = new ShapeCollector();
-        List<Shape> result = shapeCollector.addShape(new Shape());
+
+
+
+
 
 
 

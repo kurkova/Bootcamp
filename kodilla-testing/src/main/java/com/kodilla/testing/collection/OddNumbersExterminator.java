@@ -9,7 +9,9 @@ public class OddNumbersExterminator {
 
         for (int i = 0; i < numbers.size(); i++) {
             int temporaryValue = numbers.get(i);
-            if (temporaryValue % 2 == 0) {; 0
+            if (temporaryValue % 2 == 0) {
+                ;
+                0
                 newList.add(temporaryValue);
             }
         }
