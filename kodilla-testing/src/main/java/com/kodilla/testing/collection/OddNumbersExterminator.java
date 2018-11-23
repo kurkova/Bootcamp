@@ -11,7 +11,7 @@ public class OddNumbersExterminator {
             int temporaryValue = numbers.get(i);
             if (temporaryValue % 2 == 0) {
                 ;
-                0
+
                 newList.add(temporaryValue);
             }
         }

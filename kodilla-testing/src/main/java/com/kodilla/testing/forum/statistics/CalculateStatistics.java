@@ -10,7 +10,7 @@ public class CalculateStatistics {
         this.statistics = statistics;
     }
 
-    private double getaAerageNumberOfPostsPerUser() {
+    public double getaAerageNumberOfPostsPerUser() {
         if (statistics.usersNames().size() == 0) {
             averageNumberOfPostsPerUser = 0;
         } else {
@@ -33,10 +33,5 @@ public class CalculateStatistics {
         return averageNumberOfCommentsPerPost;
     }
 
-    public void calculateAdvSatistics(Statistics statistics) {
-        averageNumberOfPostsPerUser = statistics.postsCount() / (double) statistics.usersNames().size();
-        averageNumberOfCommentsPerUser = statistics.postsCount() / (double) statistics.usersNames().size();
-        averageNumberOfCommentsPerPost = (statistics.commentsCount() / (double) statistics.postsCount());
 
-    }
 }

@@ -20,17 +20,17 @@ public class StatisticstestSuite {
         usersNamesMock.add("");
 
         int numberOfPosts = 4;
-        int numberofComents = 3;
+        int numberofComents = 4;
         when(statisticsMock.usersNames()).thenReturn(usersNamesMock);
         when(statisticsMock.postsCount()).thenReturn(numberOfPosts);
         when(statisticsMock.commentsCount()).thenReturn(numberofComents);
         CalculateStatistics calculateStatistics = new CalculateStatistics(statisticsMock);
 
         //When
-        double result = calculateStatistics.calculateAdvSatistics();
+        double result = calculateStatistics.getaAerageNumberOfPostsPerUser();
 
         //Then
-        Assert.assertEquals(0.75,result, 0.001);
+        Assert.assertEquals(1.3333333333333333,result, 0.001);
     }
 }
 //
