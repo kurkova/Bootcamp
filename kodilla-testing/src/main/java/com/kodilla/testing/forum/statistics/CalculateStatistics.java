@@ -10,7 +10,7 @@ public class CalculateStatistics {
         this.statistics = statistics;
     }
 
-    public double getaAerageNumberOfPostsPerUser() {
+    private double getaAerageNumberOfPostsPerUser() {
         if (statistics.usersNames().size() == 0) {
             averageNumberOfPostsPerUser = 0;
         } else {

@@ -1,12 +1,22 @@
 package com.kodilla.stream.world;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class World {
-    private final List<Continent> theContinent = new ArrayList<>();
+
+    private final List<Continent> theContinentsList = new ArrayList<>();
+
 
     public void addContinent(Continent continent) {
-        theContinent.add(continent);
+        theContinentsList.add(continent);
+        }
+
+    public BigDecimal getPeopleQuantity() {
+        return theContinentsList.stream()
+                .flatMap(continent -> continent.getTheCountry().stream())
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
     }
 }
