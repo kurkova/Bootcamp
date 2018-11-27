@@ -135,7 +135,20 @@ public class BoardTestSuite {
         Assert.assertEquals(2, longTasks);
     }
 
+    @Test
+    //Given
+            Board project = prepareTestData();
 
+    //When
+    List<TaskList> inProgressTasks = new ArrayList<>();
+    inProgressTasks.add(new TaskList("In progress"));
+    long longTasks = project.getTaskLists().stream()
+            .filter(inProgressTasks::contains)
+            .flatMap(tl -> tl.getTasks().stream())
+            .map(t -> t.getCreated())
+            .filter(d -> d)
+
+        ChronoUnit.DAYS.between(getCreated, LocalDate.now() ))
 
 
 }

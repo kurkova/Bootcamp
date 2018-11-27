@@ -12,7 +12,7 @@ public class ShapeCollector {
         return theShapesList;
     }
 
-    public  List<Shape> removeShape(Shape shape){
+    public  List<Shape> removeShape(){
        //
         return theShapesList;
     }

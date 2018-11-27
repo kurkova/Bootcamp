@@ -18,9 +18,16 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testRemoveShape(){
+        ShapeCollector testList = new ShapeCollector();
+        List<Shape> theShape = testList.removeShape();
+
+
+        theShape =  testList.removeShape(new Triangle("Triangle", 20.0));
+
+        Assert.assertEquals(0, theShape.size() );
+
 
     }
-
 
 
 
