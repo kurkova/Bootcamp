@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 
 import static java.util.stream.Collectors.toList;
 
@@ -82,6 +83,7 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals(3, project.getTaskLists().size());
     }
+
     @Test
     public void testAddTaskListFindUsersTasks() {
         //Given
@@ -97,6 +99,7 @@ public class BoardTestSuite {
         Assert.assertEquals(user, tasks.get(0).getAssignedUser());
         Assert.assertEquals(user, tasks.get(1).getAssignedUser());
     }
+
     @Test
     public void testAddTaskListFindOutdatedTasks() {
         //Given
@@ -116,6 +119,7 @@ public class BoardTestSuite {
         Assert.assertEquals(1, tasks.size());
         Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
+
     @Test
     public void testAddTaskListFindLongTasks() {
         //Given
@@ -136,19 +140,23 @@ public class BoardTestSuite {
     }
 
     @Test
-    //Given
-            Board project = prepareTestData();
+    public void testAddTaskListAverageWorkingOnTask() {
+        //Given
+        Board project = prepareTestData();
 
-    //When
-    List<TaskList> inProgressTasks = new ArrayList<>();
-    inProgressTasks.add(new TaskList("In progress"));
-    long longTasks = project.getTaskLists().stream()
-            .filter(inProgressTasks::contains)
-            .flatMap(tl -> tl.getTasks().stream())
-            .map(t -> t.getCreated())
-            .filter(d -> d)
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        double longTasks = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(t -> t.getCreated())
+                .map(date -> ChronoUnit.DAYS.between(date, LocalDate.now()))
+                .mapToLong(t -> t)
+                .average().getAsDouble();
 
-        ChronoUnit.DAYS.between(getCreated, LocalDate.now() ))
-
-
+        //Then
+        double result = 10.0;
+        Assert.assertEquals(result, longTasks, 0.001);
+    }
 }

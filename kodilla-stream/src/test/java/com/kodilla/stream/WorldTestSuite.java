@@ -13,8 +13,12 @@ public class WorldTestSuite {
 
         World world = new World();
 
-        world.addContinent(new Continent(new Country("Poland", new BigDecimal("22222")));
-        world.addContinent(new Continent(new Country("Scotland", new BigDecimal("33333")));
+        world.addContinent(new Continent("Europe"));
+        world.addContinent((new Continent("Asia")));
+
+        Continent europe = new Continent("Europe");
+        europe.addTheCountries(new Country("Poland", new BigDecimal("222222")));
+
 
         BigDecimal result = new BigDecimal("55555");
         Assert.assertEquals(result, world.getPeopleQuantity());

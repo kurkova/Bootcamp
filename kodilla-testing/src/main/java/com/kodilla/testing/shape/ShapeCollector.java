@@ -4,22 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShapeCollector {
-    Shape shape;
+
     private List<Shape> theShapesList = new ArrayList();
 
-    public  List<Shape> addShape(Shape shape){
+    public  void addShape(Shape shape){
         //
-        return theShapesList;
+
     }
 
-    public  List<Shape> removeShape(){
+    public  void removeShape(Shape shape){
        //
-        return theShapesList;
+
     }
 
-    public List<Shape> getFigure(int n){
+    public getFigure(int n){
        //
-        return theShapesList;
+        return shape;
     }
 
     public void showFigures(){
