@@ -39,10 +39,8 @@ public class CalculateStatistics {
 
         if (quantityOfUsers == 0) {
             averagePostsPerUser = 0;
-        } else if (quantityOfPosts > 0) {
-            averagePostsPerUser = quantityOfPosts / (double) quantityOfUsers;
         } else {
-            averagePostsPerUser = 0;
+            averagePostsPerUser = quantityOfPosts / (double) quantityOfUsers;
         }
         if (quantityOfUsers > 0) {
             averageCommentsPerUser = quantityOfComments / (double) quantityOfUsers;

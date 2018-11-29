@@ -7,19 +7,26 @@ public class ShapeCollector {
 
     private List<Shape> theShapesList = new ArrayList();
 
-    public  Boolean addShape(Shape shape){
+    public void addShape(Shape shape) {
         theShapesList.add(shape);
-        return true;
     }
 
-    public  Boolean removeShape(Shape shape){
-
-        return false;
+    public void removeShape(Shape shape) {
+        theShapesList.remove(shape);
     }
 
-    public Shape getFigure(int n){
+    public Shape getFigure(int n) {
         return theShapesList.get(n);
-
     }
 
+    public List<Shape> showFigures() {
+        for (int n = 0; n < theShapesList.size(); n++) {
+            theShapesList.get(n);
+        }
+        return theShapesList;
+    }
+
+    public int size() {
+        return theShapesList.size();
+    }
 }

@@ -12,30 +12,37 @@ public class ShapeCollectorTestSuite {
     private ShapeCollector shapesList = new ShapeCollector();
 
     @Before
-    public void init(){
+    public void init() {
         shapesList.addShape(new Triangle("Triangle", 20.0));
         shapesList.addShape(new Square("Square", 21.0));
         shapesList.addShape(new Circle("Circle", 19.0));
     }
 
     @Test
-    public void testAddShape(){
-        Assert.assertTrue( shapesList.addShape(new Triangle("Triangle", 16.0)));
-
+    public void testAddShape() {
+        shapesList.addShape(new Triangle("Triangle", 15.00));
+        Assert.assertEquals(4, shapesList.size());
+        Assert.assertEquals(new Triangle("Triangle", 15.00), shapesList.getFigure(3));
     }
 
     @Test
-    public void testRemoveShape(){
-        Assert.assertTrue(shapesList.removeShape(new Square("square", 20.0)));
+    public void testRemoveShape() {
+        shapesList.removeShape(new Circle("Circle", 19.0));
+        Assert.assertEquals(2, shapesList.size());
     }
 
     @Test
-    public void testGetFigure(){
+    public void testGetFigure() {
         Assert.assertEquals(new Triangle("Triangle", 20.0), shapesList.getFigure(0));
     }
+
     @Test
-    public void testShowFigures(){
-
+    public void testShowFigures() {
+        List<Shape> newShapesList = new ArrayList<>();
+        newShapesList.add(new Triangle("Triangle", 20.0));
+        newShapesList.add(new Square("Square", 21.0));
+        newShapesList.add((new Circle("Circle", 19.0)));
+        List<Shape> result = shapesList.showFigures();
+        Assert.assertEquals(newShapesList, result);
     }
-
 }
