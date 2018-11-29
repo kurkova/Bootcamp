@@ -1,37 +1,68 @@
 package com.kodilla.testing.forum.statistics;
 
 public class CalculateStatistics {
-    Statistics statistics;
-    private double averageNumberOfPostsPerUser;
-    private double averageNumberOfCommentsPerUser;
-    private double averageNumberOfCommentsPerPost;
+    private int quantityOfUsers;
+    private int quantityOfPosts;
+    private int quantityOfComments;
+    private double averagePostsPerUser;
+    private double averageCommentsPerUser;
+    private double averageCommentsPerPost;
 
-    public CalculateStatistics(Statistics statistics) {
-        this.statistics = statistics;
+    public int getQuantityOfUsers() {
+        return quantityOfUsers;
     }
 
-    private double getaAerageNumberOfPostsPerUser() {
-        if (statistics.usersNames().size() == 0) {
-            averageNumberOfPostsPerUser = 0;
+    public int getQuantityOfPosts() {
+        return quantityOfPosts;
+    }
+
+    public int getQuantityOfComments() {
+        return quantityOfComments;
+    }
+
+    public double getAveragePostsPerUser() {
+        return averagePostsPerUser;
+    }
+
+    public double getAverageCommentsPerUser() {
+        return averageCommentsPerUser;
+    }
+
+    public double getAverageCommentsPerPost() {
+        return averageCommentsPerPost;
+    }
+
+    public void calculateAdvStatistics(Statistics statistics) {
+        quantityOfUsers = statistics.usersNames().size();
+        quantityOfPosts = statistics.postsCount();
+        quantityOfComments = statistics.commentsCount();
+        if (quantityOfPosts > 0) {
+            averagePostsPerUser = quantityOfPosts / (double) quantityOfUsers;
         } else {
-            averageNumberOfPostsPerUser = statistics.postsCount() / (double) statistics.usersNames().size();
+            averagePostsPerUser = 0;
         }
-        return averageNumberOfPostsPerUser;
-    }
-
-    private double getAverageNumberOfCommentsPerUser() {
-        if (statistics.usersNames().size() == 0) {
-            averageNumberOfCommentsPerUser = 0;
+        if (quantityOfUsers > 0) {
+            averageCommentsPerUser = quantityOfComments / (double) quantityOfUsers;
         } else {
-            averageNumberOfCommentsPerUser = statistics.postsCount() / (double) statistics.usersNames().size();
+            averageCommentsPerUser = 0;
         }
-        return averageNumberOfCommentsPerUser;
+        if (quantityOfComments > 0) {
+            averageCommentsPerPost = quantityOfPosts / (double) quantityOfComments;
+        } else {
+            averageCommentsPerPost = 0;
+        }
     }
-
-    private double getAverageNumberOfCommentsPerPost() {
-        averageNumberOfCommentsPerPost = (statistics.commentsCount() / (double) statistics.postsCount());
-        return averageNumberOfCommentsPerPost;
-    }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

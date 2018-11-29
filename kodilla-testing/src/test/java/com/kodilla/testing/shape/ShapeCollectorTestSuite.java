@@ -4,7 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -21,6 +22,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddShape(){
         Assert.assertTrue( shapesList.addShape(new Triangle("Triangle", 16.0)));
+
     }
 
     @Test
@@ -31,14 +33,6 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetFigure(){
 
-
-
-
-
     }
-
-
-
-
 
 }

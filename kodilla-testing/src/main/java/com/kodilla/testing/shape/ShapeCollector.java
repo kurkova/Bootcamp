@@ -8,8 +8,8 @@ public class ShapeCollector {
     private List<Shape> theShapesList = new ArrayList();
 
     public  Boolean addShape(Shape shape){
-
-        return false;
+        theShapesList.add(shape);
+        return true;
     }
 
     public  Boolean removeShape(Shape shape){
@@ -17,9 +17,8 @@ public class ShapeCollector {
         return false;
     }
 
-    public void getFigure(int n){
-
-
+    public Shape getFigure(int n){
+        return theShapesList.get(n);
     }
 
     public void showFigures(){
