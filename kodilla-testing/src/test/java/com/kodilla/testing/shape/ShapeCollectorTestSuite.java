@@ -1,33 +1,42 @@
 package com.kodilla.testing.shape;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.sql.Array;
 import java.util.List;
 
+
 public class ShapeCollectorTestSuite {
+    private ShapeCollector shapesList = new ShapeCollector();
+
+    @Before
+    public void init(){
+        shapesList.addShape(new Triangle("Triangle", 20.0));
+        shapesList.addShape(new Square("Square", 21.0));
+        shapesList.addShape(new Circle("Circle", 19.0));
+    }
 
     @Test
     public void testAddShape(){
-        //Given
-        ShapeCollector testList = new ShapeCollector();
-        List<Shape> shapesList = testList.addShape(new Triangle("Triangle", 20.0));
-        Assert.assertEquals(1, shapesList.size());
+        Assert.assertTrue( shapesList.addShape(new Triangle("Triangle", 16.0)));
     }
+
     @Test
     public void testRemoveShape(){
-        ShapeCollector testList = new ShapeCollector();
-        List<Shape> theShape = testList.removeShape();
+        Assert.assertTrue(shapesList.removeShape(new Square("square", 20.0)));
+    }
+
+    @Test
+    public void testGetFigure(){
 
 
-        theShape =  testList.removeShape(new Triangle("Triangle", 20.0));
 
-        Assert.assertEquals(0, theShape.size() );
 
 
     }
+
 
 
 

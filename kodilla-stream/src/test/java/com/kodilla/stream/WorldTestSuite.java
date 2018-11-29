@@ -16,8 +16,9 @@ public class WorldTestSuite {
         world.addContinent(new Continent("Europe"));
         world.addContinent((new Continent("Asia")));
 
+
         Continent europe = new Continent("Europe");
-        europe.addTheCountries(new Country("Poland", new BigDecimal("222222")));
+        europe.addTheCountries(new Country("Poland", new BigDecimal("2222")));
 
 
         BigDecimal result = new BigDecimal("55555");
