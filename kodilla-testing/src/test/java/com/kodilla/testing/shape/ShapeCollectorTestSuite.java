@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -32,6 +31,10 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testGetFigure(){
+        Assert.assertEquals(new Triangle("Triangle", 20.0), shapesList.getFigure(0));
+    }
+    @Test
+    public void testShowFigures(){
 
     }
 

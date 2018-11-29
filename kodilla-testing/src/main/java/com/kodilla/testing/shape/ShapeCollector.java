@@ -19,14 +19,7 @@ public class ShapeCollector {
 
     public Shape getFigure(int n){
         return theShapesList.get(n);
-    }
 
-    public void showFigures(){
-        //
-    }
-
-    public int size(){
-        return theShapesList.size();
     }
 
 }

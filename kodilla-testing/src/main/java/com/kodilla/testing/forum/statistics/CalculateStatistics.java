@@ -36,7 +36,10 @@ public class CalculateStatistics {
         quantityOfUsers = statistics.usersNames().size();
         quantityOfPosts = statistics.postsCount();
         quantityOfComments = statistics.commentsCount();
-        if (quantityOfPosts > 0) {
+
+        if (quantityOfUsers == 0) {
+            averagePostsPerUser = 0;
+        } else if (quantityOfPosts > 0) {
             averagePostsPerUser = quantityOfPosts / (double) quantityOfUsers;
         } else {
             averagePostsPerUser = 0;
