@@ -24,6 +24,4 @@ public final class Continent {
     public List<Country> getTheCountriesList() {
         return theCountriesList;
     }
-
-
 }
