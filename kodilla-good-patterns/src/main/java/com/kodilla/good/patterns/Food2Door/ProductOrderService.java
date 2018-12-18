@@ -4,11 +4,11 @@ import java.util.HashMap;
 
 public class ProductOrderService {
     public static void main(String[] args) {
-       OrderRequestRetrieve orderRequestRetrieve = new OrderRequestRetrieve(new HashMap<>());
-       orderRequestRetrieve.getOrders().put((new HealthyShop("LightFood")), new Salad("LightSalad",32.5));
-       OrderRequest orderRequest = orderRequestRetrieve.retrievier();
+       OrderRequestRetriever orderRequestRetriever = new OrderRequestRetriever(new HashMap<>());
+       orderRequestRetriever.getOrders().put((new HealthyShop("HealthyShop")), new Salad("LightSalad",32.5));
+       OrderRequest orderRequest = orderRequestRetriever.retrievier();
 
-       OrderProcesor orderProcesor = new OrderProcesor(new ShopOrderService(), new EmailInformationService());
-       orderProcesor.process(orderRequest);
+       OrderProcessor orderProcessor = new OrderProcessor(new ShopOrderService(), new EmailInformationService());
+       orderProcessor.process(orderRequest);
     }
 }

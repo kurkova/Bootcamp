@@ -1,10 +1,10 @@
 package com.kodilla.good.patterns.Food2Door;
 
-public class OrderProcesor {
+public class OrderProcessor {
     private OrderService orderService;
     private InformationService informationService;
 
-    public OrderProcesor(final OrderService orderService, final InformationService informationService) {
+    public OrderProcessor(final OrderService orderService, final InformationService informationService) {
         this.orderService = orderService;
         this.informationService = informationService;
     }

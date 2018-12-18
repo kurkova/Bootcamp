@@ -5,5 +5,4 @@ public class EmailInformationService implements InformationService {
     public void inform(User user){
         System.out.println("Sending message about order to: " + user.getName() + user.getLastName() + user.getEmail());
     }
-
 }

@@ -39,7 +39,7 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(new Triangle("Triangle", 20.0), shapesList.getFigure(0));
     }
 
-    /*@Test
+    @Test
     public void testShowFigures() {
         String s = " ";
         String coma = ", ";
@@ -51,5 +51,5 @@ public class ShapeCollectorTestSuite {
             }
         }
         Assert.assertEquals(s, shapesList.showFigures());
-    }*/
+    }
 }

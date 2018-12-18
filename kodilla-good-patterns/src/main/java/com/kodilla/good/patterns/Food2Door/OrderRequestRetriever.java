@@ -3,10 +3,10 @@ package com.kodilla.good.patterns.Food2Door;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OrderRequestRetrieve {
+public class OrderRequestRetriever {
     private HashMap<Shop, Product> orders;
 
-    public OrderRequestRetrieve(HashMap<Shop, Product> orders) {
+    public OrderRequestRetriever(HashMap<Shop, Product> orders) {
         this.orders = orders;
     }
     public HashMap<Shop, Product> getOrders() {

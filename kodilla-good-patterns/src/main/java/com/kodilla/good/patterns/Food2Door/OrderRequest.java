@@ -28,5 +28,4 @@ public class OrderRequest {
     public int getQuantity() {
         return quantity;
     }
-
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-11-29T22:02:24" hostname="KURKOVA-KOMP" time="0.002">
+<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-12-18T13:37:42" hostname="KURKOVA-KOMP" time="0.002">
   <properties/>
   <testcase name="testcaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
-  <testcase name="testCaseUsername" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
+  <testcase name="testCaseUsername" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.0"/>
   <system-out><![CDATA[The Suite: begin
 The Case: begin
 testingJohn Smith
