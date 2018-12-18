@@ -1,7 +1,10 @@
 package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class ShapeCollector {
 
@@ -19,12 +22,13 @@ public class ShapeCollector {
         return theShapesList.get(n);
     }
 
-    public List<Shape> showFigures() {
-        for (int n = 0; n < theShapesList.size(); n++) {
-            theShapesList.get(n);
+    public String showFigures() {
+
+        String theResultStringOfShapes = theShapesList.stream()
+                .map(Shape::toString)
+                .collect(Collectors.joining(", "));
+        return theResultStringOfShapes;
         }
-        return theShapesList;
-    }
 
     public int size() {
         return theShapesList.size();

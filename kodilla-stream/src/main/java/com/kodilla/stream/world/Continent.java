@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public final class Continent {
     private final String nameContinent;
     private final List<Country> theCountriesList = new ArrayList<>();

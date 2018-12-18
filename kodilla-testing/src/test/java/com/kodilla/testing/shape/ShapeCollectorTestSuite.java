@@ -5,7 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 
 public class ShapeCollectorTestSuite {
@@ -36,13 +39,17 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(new Triangle("Triangle", 20.0), shapesList.getFigure(0));
     }
 
-    @Test
+    /*@Test
     public void testShowFigures() {
-        List<Shape> newShapesList = new ArrayList<>();
-        newShapesList.add(new Triangle("Triangle", 20.0));
-        newShapesList.add(new Square("Square", 21.0));
-        newShapesList.add((new Circle("Circle", 19.0)));
-        List<Shape> result = shapesList.showFigures();
-        Assert.assertEquals(newShapesList, result);
-    }
+        String s = " ";
+        String coma = ", ";
+        for (int i = 0; i < shapesList.size(); i++) {
+            if (i > 0) {
+                s = s  + coma + shapesList.getFigure(i);
+            } else {
+                s = s + shapesList.getFigure(i);
+            }
+        }
+        Assert.assertEquals(s, shapesList.showFigures());
+    }*/
 }

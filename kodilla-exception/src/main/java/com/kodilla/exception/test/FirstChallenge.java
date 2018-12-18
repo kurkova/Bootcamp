@@ -19,10 +19,5 @@ public class FirstChallenge {
         } finally {
             System.out.println("No warning message");
         }
-
-
-
-
-
     }
 }
