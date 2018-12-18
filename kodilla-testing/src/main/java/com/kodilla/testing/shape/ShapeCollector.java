@@ -23,12 +23,17 @@ public class ShapeCollector {
     }
 
     public String showFigures() {
-
-        String theResultStringOfShapes = theShapesList.stream()
-                .map(Shape::toString)
-                .collect(Collectors.joining(", "));
-        return theResultStringOfShapes;
+        String s = "";
+        String coma = ", ";
+        for (int i = 0; i < theShapesList.size(); i++) {
+            if (i > 0) {
+                s = s + coma + theShapesList.get(i).getShapeName();
+            } else {
+                s = s + theShapesList.get(i).getShapeName();
+            }
         }
+        return s;
+    }
 
     public int size() {
         return theShapesList.size();

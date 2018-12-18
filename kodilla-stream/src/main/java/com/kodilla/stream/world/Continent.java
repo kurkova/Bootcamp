@@ -16,7 +16,7 @@ public final class Continent {
         return nameContinent;
     }
 
-    public void addTheCountries(Country country) {
+    public void addTheCountry(Country country) {
         theCountriesList.add(country);
     }
 

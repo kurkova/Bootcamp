@@ -12,11 +12,11 @@ public class WorldTestSuite {
     public void testGetPeopleQuantity() {
         //Given
         Continent europe = new Continent("Europe");
-        europe.addTheCountries(new Country("Poland", new BigDecimal("22222")));
-        europe.addTheCountries(new Country("Scotland", new BigDecimal("55555")));
+        europe.addTheCountry(new Country("Poland", new BigDecimal("22222")));
+        europe.addTheCountry(new Country("Scotland", new BigDecimal("55555")));
         Continent asia = new Continent("Asia");
-        asia.addTheCountries(new Country("Hong Kong", new BigDecimal("22222")));
-        asia.addTheCountries(new Country("Macau", new BigDecimal("11111")));
+        asia.addTheCountry(new Country("Hong Kong", new BigDecimal("22222")));
+        asia.addTheCountry(new Country("Macau", new BigDecimal("11111")));
         World world = new World();
         world.addContinent(europe);
         world.addContinent(asia);

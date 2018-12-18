@@ -41,15 +41,6 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testShowFigures() {
-        String s = " ";
-        String coma = ", ";
-        for (int i = 0; i < shapesList.size(); i++) {
-            if (i > 0) {
-                s = s  + coma + shapesList.getFigure(i);
-            } else {
-                s = s + shapesList.getFigure(i);
-            }
-        }
-        Assert.assertEquals(s, shapesList.showFigures());
+        Assert.assertEquals("Triangle, Square, Circle", shapesList.showFigures());
     }
 }
