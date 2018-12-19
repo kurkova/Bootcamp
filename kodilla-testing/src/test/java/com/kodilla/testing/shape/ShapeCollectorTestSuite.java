@@ -41,6 +41,6 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testShowFigures() {
-        Assert.assertEquals("Triangle, Square, Circle", shapesList.showFigures());
+        Assert.assertEquals("Triangle,Square,Circle", shapesList.showFigures());
     }
 }
