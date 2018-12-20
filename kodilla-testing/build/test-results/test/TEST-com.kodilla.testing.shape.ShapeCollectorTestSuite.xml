@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-12-18T13:37:42" hostname="KURKOVA-KOMP" time="0.005">
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-12-19T21:11:18" hostname="KURKOVA-KOMP" time="0.016">
   <properties/>
-  <testcase name="testRemoveShape" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.003"/>
+  <testcase name="testShowFigures" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.014"/>
+  <testcase name="testRemoveShape" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
   <testcase name="testAddShape" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
-  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
