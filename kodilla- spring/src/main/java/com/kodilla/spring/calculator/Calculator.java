@@ -1,11 +1,10 @@
 package com.kodilla.spring.calculator;
 
-
 import org.springframework.stereotype.Service;
 
 @Service
-public class Calculator {
-    Display display;
+public final class Calculator {
+    private Display display;
 
     public Calculator(Display display) {
         this.display = display;
