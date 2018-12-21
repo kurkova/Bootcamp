@@ -27,6 +27,6 @@ public class BoardConfig {
 
     @Bean
     Board getBoard() {
-        return new Board(getToDoList(), getInProgressList(), getDoneList());
+        return new Board();
     }
 }
