@@ -1,6 +1,7 @@
 package com.kodilla.spring.calculator;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,14 +9,23 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CalculatorTestSuite {
+    ApplicationContext context;
+    Calculator calculator;
+
+    @Before
+    public void before() {
+        context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+        calculator = context.getBean(Calculator.class);
+    }
+
     @Test
     public void testAdd() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Calculator calculator = context.getBean(Calculator.class);
+        before();
         //When
         Double resultAdd = calculator.add(3.5, 4.5);
         //Then
@@ -25,8 +35,7 @@ public class CalculatorTestSuite {
     @Test
     public void testSub() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Calculator calculator = context.getBean(Calculator.class);
+        before();
         //When
         Double resultSub = calculator.sub(8.5, 4.5);
         //Then
@@ -36,8 +45,7 @@ public class CalculatorTestSuite {
     @Test
     public void testMul() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Calculator calculator = context.getBean(Calculator.class);
+        before();
         //When
         Double resultSub = calculator.mul(8.26, 4.52);
         //Then
@@ -47,8 +55,7 @@ public class CalculatorTestSuite {
     @Test
     public void testDiv() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Calculator calculator = context.getBean(Calculator.class);
+        before();
         //When
         Double resultDiv = calculator.div(8.26, 4.52);
         //Then
