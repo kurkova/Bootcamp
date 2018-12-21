@@ -12,10 +12,8 @@ public class BookTestSuite {
     public void testGetListUsingFor() {
         //Given
         BookDirectory bookDirectory = new BookDirectory();
-
         //When
         List<Book> books = bookDirectory.getList();
-
         //Then
         int numberOfBooksPublicatedAfter2007 = 0;
         for(Book book : books) {

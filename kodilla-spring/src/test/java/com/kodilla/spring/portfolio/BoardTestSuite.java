@@ -17,11 +17,11 @@ public class BoardTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         Board board = context.getBean(Board.class);
         //When
-        board.getTodoList().addTask("Christmas shopping");
+        board.getToDoList().addTask("Christmas shopping");
         board.getInProgressList().addTask("Java course");
         board.getDoneList().addTask("Morning exercise");
         //When
-        Assert.assertEquals("Christmas shopping", board.getTodoList().getTask(0));
+        Assert.assertEquals("Christmas shopping", board.getToDoList().getTask(0));
         Assert.assertEquals("Java course", board.getInProgressList().getTask(0));
         Assert.assertEquals("Morning exercise", board.getDoneList().getTask(0));
     }
