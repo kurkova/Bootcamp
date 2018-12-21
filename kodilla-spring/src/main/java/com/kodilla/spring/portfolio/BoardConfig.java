@@ -26,7 +26,7 @@ public class BoardConfig {
     }
 
     @Bean
-    Board getBoard() {
+    public Board getBoard() {
         return new Board();
     }
 }
