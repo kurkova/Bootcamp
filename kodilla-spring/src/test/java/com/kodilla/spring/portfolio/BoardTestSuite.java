@@ -20,7 +20,7 @@ public class BoardTestSuite {
         board.getToDoList().addTask("Christmas shopping");
         board.getInProgressList().addTask("Java course");
         board.getDoneList().addTask("Morning exercise");
-        //When
+        //Then
         Assert.assertEquals("Christmas shopping", board.getToDoList().getTask(0));
         Assert.assertEquals("Java course", board.getInProgressList().getTask(0));
         Assert.assertEquals("Morning exercise", board.getDoneList().getTask(0));

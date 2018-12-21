@@ -20,25 +20,26 @@ public class BoardConfig {
     @Qualifier("DoneList")
     TaskList doneList;
 
-    @Bean (name = "ToDoList")
+    @Bean(name = "ToDoList")
     @Scope("prototype")
     public TaskList getToDoList() {
         return new TaskList();
     }
 
-    @Bean (name= "InProgressList")
+    @Bean(name = "InProgressList")
     @Scope("prototype")
     public TaskList getInProgressList() {
         return new TaskList();
     }
 
-    @Bean (name = "DoneList")
+    @Bean(name = "DoneList")
     @Scope("prototype")
     public TaskList getDoneList() {
         return new TaskList();
     }
 
-    @Bean Board getBoard(){
+    @Bean
+    Board getBoard() {
         return new Board(toDoList, inProgressList, doneList);
     }
 }
