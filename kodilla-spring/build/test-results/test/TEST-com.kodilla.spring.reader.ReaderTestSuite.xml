@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.spring.reader.ReaderTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-22T10:22:25" hostname="KURKOVA-KOMP" time="0.015">
+<testsuite name="com.kodilla.spring.reader.ReaderTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-27T17:53:07" hostname="KURKOVA-KOMP" time="0.062">
   <properties/>
-  <testcase name="testRead" classname="com.kodilla.spring.reader.ReaderTestSuite" time="0.015"/>
-  <system-out><![CDATA[Reading: The book number one
+  <testcase name="testRead" classname="com.kodilla.spring.reader.ReaderTestSuite" time="0.062"/>
+  <system-out><![CDATA[2018-12-27 17:53:07.450  INFO 4056 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7c330953: startup date [Thu Dec 27 17:53:07 GMT 2018]; root of context hierarchy
+Reading: The book number one
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
