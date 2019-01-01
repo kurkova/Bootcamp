@@ -17,7 +17,7 @@ public final class Bigmac {
 
         public BigmacBuilder bun(String bun) {
             this.bun = bun;
-            if (bun.equals("normal") || bun.equals("sesame")) {
+            if (bun.equals("standard") || bun.equals("sesame")) {
                 return this;
             }
             throw new IllegalStateException("Optional bun: normal or sesame");
@@ -76,7 +76,7 @@ public final class Bigmac {
 
     @Override
     public String toString() {
-        return "Pizza{" +
+        return "Bigmac{" +
                 "bun='" + bun + '\'' +
                 ", burgers='" + burgers + '\'' +
                 ", souce='" + sauce + '\'' +

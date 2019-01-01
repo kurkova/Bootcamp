@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class UserTestSuite {
     @Test
-    public void testDefaultSharingStrategies(){
+    public void testDefaultSharingStrategies() {
         //Given
         User paul = new YGeneration("Paul Paul");
         User john = new ZGeneration("John John");
@@ -17,13 +17,14 @@ public class UserTestSuite {
         System.out.println(johnPublisher);
         String smithPublisher = smith.sharePost();
         System.out.println(smithPublisher);
-       //Then
+        //Then
         Assert.assertEquals("Twitter", paulPublisher);
         Assert.assertEquals("Facebook", johnPublisher);
         Assert.assertEquals("Snapchat", smithPublisher);
     }
+
     @Test
-    public void testIndividualSharingStrategy(){
+    public void testIndividualSharingStrategy() {
         //Given
         User paul = new YGeneration("Paul Paul");
         //When

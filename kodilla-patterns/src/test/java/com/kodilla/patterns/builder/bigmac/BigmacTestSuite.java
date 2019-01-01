@@ -8,7 +8,7 @@ public class BigmacTestSuite {
     public void testBigmacNew() {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
-                .bun("normal")
+                .bun("standard")
                 .burgers(3)
                 .sauce("standard")
                 .ingredient("onion")
@@ -18,8 +18,10 @@ public class BigmacTestSuite {
         //When
         int howManyIngredients = bigmac.getIngredients().size();
         String kindOfBun = bigmac.getBun();
+        int quantityBurgers = bigmac.getBurgers();
         //Then
         Assert.assertEquals(2, howManyIngredients);
-        Assert.assertEquals("normal", kindOfBun);
+        Assert.assertEquals("standard", kindOfBun);
+        Assert.assertEquals(3, quantityBurgers);
     }
 }

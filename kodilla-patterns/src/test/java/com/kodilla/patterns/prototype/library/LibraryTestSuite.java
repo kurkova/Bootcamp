@@ -2,6 +2,7 @@ package com.kodilla.patterns.prototype.library;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
@@ -30,7 +31,6 @@ public class LibraryTestSuite {
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-
         //When
         //Then
         Assert.assertEquals(library.getBooks(), cloneLibrary.getBooks());
