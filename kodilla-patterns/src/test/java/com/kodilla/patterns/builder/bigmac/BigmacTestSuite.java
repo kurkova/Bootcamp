@@ -14,7 +14,6 @@ public class BigmacTestSuite {
                 .ingredient("onion")
                 .ingredient("bacon")
                 .build();
-        System.out.println(bigmac);
         //When
         int howManyIngredients = bigmac.getIngredients().size();
         String kindOfBun = bigmac.getBun();
@@ -23,5 +22,27 @@ public class BigmacTestSuite {
         Assert.assertEquals(2, howManyIngredients);
         Assert.assertEquals("standard", kindOfBun);
         Assert.assertEquals(3, quantityBurgers);
+    }
+    @Test
+    public void testBigmacException() {
+        //Given
+        Bigmac bigmac = new Bigmac.BigmacBuilder()
+                .bun("wheat")
+                .burgers(3)
+                .sauce("standard")
+                .ingredient("onion")
+                .build();
+        //When
+        int howManyIngredients = bigmac.getIngredients().size();
+        String kindOfBun = bigmac.getBun();
+        int quantityBurgers = bigmac.getBurgers();
+
+        //Then
+        try{
+            Assert.assertEquals(2, howManyIngredients);
+            Assert.assertEquals("standard", kindOfBun);
+            Assert.assertEquals(3, quantityBurgers);
+        }catch(IllegalStateException e){
+        }
     }
 }

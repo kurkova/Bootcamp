@@ -4,8 +4,9 @@ public class User {
     final private String name;
     protected SocialPublisher socialPublisher;
 
-    public User(String name) {
+    public User(String name, SocialPublisher socialPublisher) {
         this.name = name;
+        this.socialPublisher = socialPublisher;
     }
 
     public String getName() {
