@@ -23,8 +23,8 @@ public class BigmacTestSuite {
         Assert.assertEquals("standard", kindOfBun);
         Assert.assertEquals(3, quantityBurgers);
     }
-    @Test
-    public void testBigmacException() {
+    @Test(expected = IllegalStateException.class)
+    public void testBigmacException () {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .bun("wheat")
@@ -36,13 +36,9 @@ public class BigmacTestSuite {
         int howManyIngredients = bigmac.getIngredients().size();
         String kindOfBun = bigmac.getBun();
         int quantityBurgers = bigmac.getBurgers();
-
         //Then
-        try{
-            Assert.assertEquals(2, howManyIngredients);
-            Assert.assertEquals("standard", kindOfBun);
-            Assert.assertEquals(3, quantityBurgers);
-        }catch(IllegalStateException e){
-        }
+        Assert.assertEquals(2, howManyIngredients);
+        Assert.assertEquals("standard", kindOfBun);
+        Assert.assertEquals(3, quantityBurgers);
     }
 }
