@@ -25,20 +25,11 @@ public class BigmacTestSuite {
     }
     @Test(expected = IllegalStateException.class)
     public void testBigmacException() {
-        //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .bun("wheat")
                 .burgers(3)
                 .sauce("standard")
                 .ingredient("onion")
                 .build();
-        //When
-        int howManyIngredients = bigmac.getIngredients().size();
-        String kindOfBun = bigmac.getBun();
-        int quantityBurgers = bigmac.getBurgers();
-        //Then
-        Assert.assertEquals(2, howManyIngredients);
-        Assert.assertEquals("standard", kindOfBun);
-        Assert.assertEquals(3, quantityBurgers);
     }
 }
