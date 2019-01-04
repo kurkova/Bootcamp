@@ -1,28 +1,22 @@
 package com.kodilla.good.patterns.food2Door;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class OrderRequestRetriever {
-    private HashMap<Shop, Product> orders;
+    private List<OrderRequest> ordersList = new ArrayList<>();
 
-    public OrderRequestRetriever(HashMap<Shop, Product> orders) {
-        this.orders = orders;
-    }
-    public HashMap<Shop, Product> getOrders() {
-        return orders;
-    }
+    public List<OrderRequest> retrieve() {
+        Shop shop1 = new Shop("HealthyShop");
+        Product product1 = new Product("Fish", 2.5);
+        User user1 = new User("Paul", "John", "paulaJohn@wp.pl");
+        int quantity1 = 2;
+        ordersList.add(new OrderRequest(shop1, product1, user1, quantity1));
 
-    public OrderRequest retrievier() {
-        Shop shop = null;
-        Product product = null;
-        User user = new User("Paul", "John", "paulaJohn@wp.pl");
-        int quantity = 2;
-
-        for (Map.Entry<Shop, Product> map : orders.entrySet()) {
-            shop = map.getKey();
-            product = map.getValue();
-        }
-        return new OrderRequest(shop, product, user, quantity);
+        Shop shop2 = new Shop("GlutenFree");
+        Product product2 = new Product("Pasta", 3.24);
+        User user2 = new User("Mark", "Sit", "sitMark@wp.pl");
+        int quantity2 = 3;
+        ordersList.add(new OrderRequest(shop2, product2, user2, quantity2));
+        return new ArrayList<>(ordersList);
     }
 }

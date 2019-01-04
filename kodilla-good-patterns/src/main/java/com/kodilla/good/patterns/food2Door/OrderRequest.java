@@ -6,7 +6,7 @@ public class OrderRequest {
     private User user;
     private int quantity;
 
-    public OrderRequest( final Shop shop, final Product product, final User user, final int quantity) {
+    public OrderRequest(Shop shop, Product product, User user, int quantity) {
         this.shop = shop;
         this.product = product;
         this.user = user;

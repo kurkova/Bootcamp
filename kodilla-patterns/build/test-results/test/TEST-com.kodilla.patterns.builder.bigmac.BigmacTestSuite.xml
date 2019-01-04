@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-04T13:11:34" hostname="KURKOVA-KOMP" time="0.006">
+  <properties/>
+  <testcase name="testBigmacNew" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.004"/>
+  <testcase name="testBigmacException" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
