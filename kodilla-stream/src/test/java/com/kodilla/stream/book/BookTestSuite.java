@@ -1,7 +1,5 @@
 package com.kodilla.stream.book;
 
-import com.kodilla.stream.Book.Book;
-import com.kodilla.stream.Book.BookDirectory;
 import org.junit.Assert;
 import org.junit.Test;
 

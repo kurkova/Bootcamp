@@ -1,4 +1,4 @@
-package com.kodilla.stream.Book;
+package com.kodilla.stream.book;
 
 public final class Book {
     private final String author;
@@ -32,7 +32,7 @@ public final class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "book{" +
                 "author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", yearOfPublication=" + yearOfPublication +
