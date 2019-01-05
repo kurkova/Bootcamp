@@ -57,13 +57,13 @@ public class FlightsServiceTestSuite {
     }
 
     @Test
-    public void testDirectFlightsFromTo() {
+    public void testFindDirectFlightsFromTo() {
         //Given
         //When
         Set<Flight> expected = new HashSet<>();
         expected.add(new Flight("Warsaw", "Krakow"));
         when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
-        Set<Flight> result = flightsService.flindDirectFlightsFromTo(departureAirport, arrivalAirport);
+        Set<Flight> result = flightsService.findDirectFlightsFromTo(departureAirport, arrivalAirport);
         //Then
         Assert.assertEquals(expected, result);
     }

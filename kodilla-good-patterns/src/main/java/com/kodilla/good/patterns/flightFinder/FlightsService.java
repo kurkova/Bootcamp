@@ -25,7 +25,7 @@ public class FlightsService {
                 .collect(Collectors.toSet());
     }
 
-    public Set<Flight> flindDirectFlightsFromTo(String departureAirport, String arrivalAirport) {
+    public Set<Flight> findDirectFlightsFromTo(String departureAirport, String arrivalAirport) {
         return flightsDatabase.getFlightsSet().stream()
                 .filter(flight -> flight.getDepartureAirport().equals(departureAirport) && flight.getArrivalAirport().equals(arrivalAirport))
                 .collect(Collectors.toSet());
