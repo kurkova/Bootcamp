@@ -73,7 +73,6 @@ public class FlightsServiceTestSuite {
         //Given
         //When
         List<Flight> flights = new ArrayList<>();
-        //flights.add(new Flight("Warsaw","Krakow"));
         flights.add(new Flight("Warsaw", "Gdansk"));
         flights.add(new Flight("Gdansk", "Krakow"));
         Set<List<Flight>> expected = new HashSet<>();
