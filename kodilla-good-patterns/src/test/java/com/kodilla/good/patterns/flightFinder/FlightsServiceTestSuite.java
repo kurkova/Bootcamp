@@ -28,6 +28,7 @@ public class FlightsServiceTestSuite {
         flightsSet.add(new Flight("Warsaw", "Krakow"));
         flightsSet.add(new Flight("Warsaw", "Gdansk"));
         flightsSet.add(new Flight("Gdansk", "Krakow"));
+        when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
     }
 
     @Test
@@ -37,7 +38,6 @@ public class FlightsServiceTestSuite {
         Set<Flight> expected = new HashSet<>();
         expected.add(new Flight("Warsaw", "Krakow"));
         expected.add(new Flight("Warsaw", "Gdansk"));
-        when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
         Set<Flight> result = flightsService.findFlightsFrom(departureAirport);
         //Then
         Assert.assertEquals(expected, result);
@@ -50,7 +50,7 @@ public class FlightsServiceTestSuite {
         Set<Flight> expected = new HashSet<>();
         expected.add(new Flight("Warsaw", "Krakow"));
         expected.add(new Flight("Gdansk", "Krakow"));
-        when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
+
         Set<Flight> result = flightsService.findFlightsTo(arrivalAirport);
         //Then
         Assert.assertEquals(expected, result);
@@ -62,7 +62,6 @@ public class FlightsServiceTestSuite {
         //When
         Set<Flight> expected = new HashSet<>();
         expected.add(new Flight("Warsaw", "Krakow"));
-        when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
         Set<Flight> result = flightsService.findDirectFlightsFromTo(departureAirport, arrivalAirport);
         //Then
         Assert.assertEquals(expected, result);
@@ -77,7 +76,6 @@ public class FlightsServiceTestSuite {
         flights.add(new Flight("Gdansk", "Krakow"));
         Set<List<Flight>> expected = new HashSet<>();
         expected.add(flights);
-        when(flightsDatabaseMock.getFlightsSet()).thenReturn(flightsSet);
         Set<List<Flight>> result = flightsService.findConnectingFlightsFromTo(departureAirport, arrivalAirport);
         //Then
         Assert.assertEquals(expected, result);
