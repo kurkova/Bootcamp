@@ -50,7 +50,6 @@ public class FlightsServiceTestSuite {
         Set<Flight> expected = new HashSet<>();
         expected.add(new Flight("Warsaw", "Krakow"));
         expected.add(new Flight("Gdansk", "Krakow"));
-
         Set<Flight> result = flightsService.findFlightsTo(arrivalAirport);
         //Then
         Assert.assertEquals(expected, result);
