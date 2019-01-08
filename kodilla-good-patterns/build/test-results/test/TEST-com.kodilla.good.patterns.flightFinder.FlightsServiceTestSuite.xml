@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-04T14:01:02" hostname="KURKOVA-KOMP" time="0.004">
+<testsuite name="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-08T16:24:54" hostname="DESKTOP-1GN4MES" time="0.093">
   <properties/>
-  <testcase name="testFindFlightsFrom" classname="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" time="0.004"/>
+  <testcase name="testFindFlightsTo" classname="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" time="0.088"/>
+  <testcase name="testFindConnectingFlightsFromTo" classname="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" time="0.003"/>
+  <testcase name="testFindFlightFrom" classname="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" time="0.001"/>
+  <testcase name="testFindDirectFlightsFromTo" classname="com.kodilla.good.patterns.flightFinder.FlightsServiceTestSuite" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
