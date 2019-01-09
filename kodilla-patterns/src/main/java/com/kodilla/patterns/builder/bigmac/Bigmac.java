@@ -55,7 +55,6 @@ public final class Bigmac {
         this.burgers = burgers;
         this.sauce = sauce;
         this.ingredients = new ArrayList<>(ingredients);
-
     }
 
     public String getBun() {

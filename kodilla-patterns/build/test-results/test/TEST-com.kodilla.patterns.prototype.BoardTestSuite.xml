@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.BoardTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-08T16:24:56" hostname="DESKTOP-1GN4MES" time="0.013">
+<testsuite name="com.kodilla.patterns.prototype.BoardTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-09T18:45:18" hostname="DESKTOP-1GN4MES" time="0.014">
   <properties/>
-  <testcase name="testToString" classname="com.kodilla.patterns.prototype.BoardTestSuite" time="0.013"/>
+  <testcase name="testToString" classname="com.kodilla.patterns.prototype.BoardTestSuite" time="0.014"/>
   <system-out><![CDATA[Board [Project number 1]
    List [Done Tasks]
       Task [Done Task number 1]
