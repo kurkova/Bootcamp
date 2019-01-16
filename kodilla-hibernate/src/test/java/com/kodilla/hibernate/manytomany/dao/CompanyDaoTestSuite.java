@@ -92,10 +92,6 @@ public class CompanyDaoTestSuite {
         companyDao.save(softwareLen);
         companyDao.save(appleSoft);
 
-        employeeDao.save(paulaWalk);
-        employeeDao.save(johnStaff);
-        employeeDao.save(donaldBret);
-
         //When
         List<Employee> lastName = employeeDao.retrieveEmployeeLastName("Walk");
         List<Company> nameStartWith = companyDao.findByThreeCharsPrefix("Sof");
@@ -103,5 +99,14 @@ public class CompanyDaoTestSuite {
         //Then
         Assert.assertEquals(1, lastName.size());
         Assert.assertNotEquals(2, nameStartWith.size());
+
+        //CleanUp
+        try {
+            companyDao.delete(softwareApp);
+            companyDao.delete(softwareLen);
+            companyDao.delete(appleSoft);
+        } catch (Exception e) {
+            //do nothing
+        }
     }
 }

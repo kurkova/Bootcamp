@@ -35,14 +35,12 @@ public class InvoiceDaoTestSuite {
         item2.setInvoice(invoice);
         //When
         invoiceDao.save(invoice);
-        int id = invoice.getId();
-
-        Invoice readInvoice = invoiceDao.findOne(id);
-
+        int idInvoice = invoice.getId();
+        Invoice readIdInvoice = invoiceDao.findById(idInvoice);
         //Then
-        Assert.assertEquals(id, readInvoice.getId());
-
+        Assert.assertEquals(idInvoice, readIdInvoice.getId());
+        Assert.assertEquals("124/10/2018", readIdInvoice.getNumber());
         //CleanUp
-        invoiceDao.delete(id);
+        invoiceDao.delete(idInvoice);
     }
 }
