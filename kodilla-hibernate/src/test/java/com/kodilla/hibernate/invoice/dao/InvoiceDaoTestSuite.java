@@ -23,8 +23,8 @@ public class InvoiceDaoTestSuite {
         //Given
         Invoice invoice = new Invoice("124/10/2018");
         Product milk = new Product("milk");
-        Item item1 = new Item(new BigDecimal(3), 3, new BigDecimal(2));
-        Item item2 = new Item(new BigDecimal(4), 2, new BigDecimal(3));
+        Item item1 = new Item(new BigDecimal(3), 3);
+        Item item2 = new Item(new BigDecimal(4), 2);
         milk.getItems().add(item1);
         milk.getItems().add(item2);
         invoice.getItems().add(item1);

@@ -17,7 +17,7 @@ public class Item {
     public Item() {
     }
 
-    public Item(BigDecimal price, int quantity, BigDecimal value) {
+    public Item(BigDecimal price, int quantity) {
         this.price = price;
         this.quantity = quantity;
         this.value = price.multiply((new BigDecimal(quantity)));
