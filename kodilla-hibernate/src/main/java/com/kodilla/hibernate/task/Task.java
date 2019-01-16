@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+
 @Entity
 @Table(name = "TASKS")
 public class Task {
@@ -56,7 +57,7 @@ public class Task {
     }
 
     @ManyToOne
-    @JoinColumn(name ="TASKLIST_ID")
+    @JoinColumn(name = "TASKLIST_ID")
     public TaskList getTaskList() {
         return taskList;
     }

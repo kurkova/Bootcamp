@@ -9,14 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
     @Autowired
-    CompanyDao companyDao;
+    private CompanyDao companyDao;
+    @Autowired
+    private EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -59,5 +63,45 @@ public class CompanyDaoTestSuite {
         } catch (Exception e) {
             //do nothing
         }
+    }
+
+    @Test
+    public void testNamedQueries() {
+        //Given
+        Employee paulaWalk = new Employee("Paul", "Walk");
+        Employee johnStaff = new Employee("John", "Staff");
+        Employee donaldBret = new Employee("Donald", "Bret");
+
+        Company softwareApp = new Company("Software App");
+        Company softwareLen = new Company("Software len");
+        Company appleSoft = new Company("Apple Soft");
+
+        softwareApp.getEmployees().add(paulaWalk);
+        softwareLen.getEmployees().add(johnStaff);
+        softwareLen.getEmployees().add(donaldBret);
+        appleSoft.getEmployees().add(paulaWalk);
+        appleSoft.getEmployees().add(donaldBret);
+
+        paulaWalk.getCompanies().add(softwareApp);
+        paulaWalk.getCompanies().add(appleSoft);
+        johnStaff.getCompanies().add(softwareLen);
+        donaldBret.getCompanies().add(appleSoft);
+        donaldBret.getCompanies().add(softwareLen);
+
+        companyDao.save(softwareApp);
+        companyDao.save(softwareLen);
+        companyDao.save(appleSoft);
+
+        employeeDao.save(paulaWalk);
+        employeeDao.save(johnStaff);
+        employeeDao.save(donaldBret);
+
+        //When
+        List<Employee> lastName = employeeDao.retrieveEmployeeLastName("Walk");
+        List<Company> nameStartWith = companyDao.findByThreeCharsPrefix("Sof");
+
+        //Then
+        Assert.assertEquals(1, lastName.size());
+        Assert.assertNotEquals(2, nameStartWith.size());
     }
 }
