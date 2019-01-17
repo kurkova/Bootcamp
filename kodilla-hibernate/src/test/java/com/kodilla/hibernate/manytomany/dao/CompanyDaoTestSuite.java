@@ -50,10 +50,13 @@ public class CompanyDaoTestSuite {
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
 
+        Company readIdSoftwareMachineId = companyDao.findById(softwareMachineId);
+        Company readIdDataMaestersId = companyDao.findById(dataMaestersId);
+        Company readIdGreyMatterId = companyDao.findById(greyMatterId);
         //Then
-        Assert.assertNotEquals(0, softwareMachineId);
-        Assert.assertNotEquals(0, dataMaestersId);
-        Assert.assertNotEquals(0, greyMatterId);
+        Assert.assertEquals(softwareMachineId, readIdSoftwareMachineId.getId());
+        Assert.assertEquals(dataMaestersId, readIdDataMaestersId.getId());
+        Assert.assertEquals(greyMatterId, readIdGreyMatterId.getId());
 
         //CleanUp
         try {
@@ -98,7 +101,7 @@ public class CompanyDaoTestSuite {
 
         //Then
         Assert.assertEquals(1, lastName.size());
-        Assert.assertNotEquals(2, nameStartWith.size());
+        Assert.assertEquals(2, nameStartWith.size());
 
         //CleanUp
         try {
