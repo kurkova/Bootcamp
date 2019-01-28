@@ -19,5 +19,4 @@ public interface CompanyDao extends CrudRepository<Company, Integer> {
 
     @Query
     Company findById(int id);
-
 }

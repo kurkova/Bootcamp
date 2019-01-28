@@ -1,0 +1,19 @@
+body {
+    background-color: grey;
+    font-family: Georgia, Arial;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 30%;
+}
+
+h2 {
+    text-align: center;
+    color: green;
+}
+
+p {
+    text-align: center;
+}
