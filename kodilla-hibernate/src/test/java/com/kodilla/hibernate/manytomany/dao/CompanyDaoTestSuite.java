@@ -1,4 +1,4 @@
-package com.kodilla.hibernate.manytomany.dao;
+/*package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
@@ -113,3 +113,4 @@ public class CompanyDaoTestSuite {
         }
     }
 }
+*/

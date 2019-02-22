@@ -1,5 +1,5 @@
 package com.kodilla.hibernate.task.dao;
-
+/*
 import com.kodilla.hibernate.task.Task;
 import com.kodilla.hibernate.task.TaskFinancialDetails;
 import org.junit.Assert;
@@ -70,3 +70,4 @@ public class TaskDaoTestSuite {
         taskDao.delete(id);
     }
 }
+*/
