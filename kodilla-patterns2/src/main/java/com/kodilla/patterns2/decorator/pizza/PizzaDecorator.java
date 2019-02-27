@@ -2,7 +2,7 @@ package com.kodilla.patterns2.decorator.pizza;
 
 import java.math.BigDecimal;
 
-public class PizzaDecorator implements MakePizza {
+public abstract class PizzaDecorator implements MakePizza {
     private final MakePizza makePizza;
 
     protected PizzaDecorator(MakePizza makePizza){

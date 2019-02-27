@@ -1,5 +1,5 @@
 package com.kodilla.patterns2.dao.calculator;
-
+/*
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -16,3 +16,4 @@ public class Watcher {
         LOGGER.info("Logging the event");
     }
 }
+*/
