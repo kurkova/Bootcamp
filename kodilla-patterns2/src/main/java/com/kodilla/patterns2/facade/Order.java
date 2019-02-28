@@ -9,21 +9,20 @@ public class Order {
     private final List<Item> items = new ArrayList<>();
     private final Long orderId;
     private final Long userId;
-    private boolean isPaid= false;
+    private boolean isPaid = false;
     private boolean isVerified = false;
     private boolean isSubmitted = false;
 
 
-
-    public Order(Long orderId, Long userId, ProductService productService){
+    public Order(Long orderId, Long userId, ProductService productService) {
         this.orderId = orderId;
         this.userId = userId;
         this.productService = productService;
     }
 
-    public BigDecimal calculateValue(){
+    public BigDecimal calculateValue() {
         BigDecimal sum = BigDecimal.ZERO;
-        for (Item item : items){
+        for (Item item : items) {
             sum = sum.add(productService.getPrice(item.getProductId()).multiply(new BigDecimal(item.getQty())));
         }
         return sum;

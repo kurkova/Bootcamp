@@ -1,4 +1,4 @@
-/*package com.kodilla.hibernate.manytomany.dao;
+package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
@@ -96,8 +96,8 @@ public class CompanyDaoTestSuite {
         companyDao.save(appleSoft);
 
         //When
-        List<Employee> lastName = employeeDao.retrieveEmployeeLastName("Walk");
-        List<Company> nameStartWith = companyDao.findByThreeCharsPrefix("Sof");
+        List<Employee> lastName = employeeDao.findEmployeeNameLike("Walk");
+        List<Company> nameStartWith = companyDao.findCompanyNameLike("Sof");
 
         //Then
         Assert.assertEquals(1, lastName.size());
@@ -113,4 +113,3 @@ public class CompanyDaoTestSuite {
         }
     }
 }
-*/
