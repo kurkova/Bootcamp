@@ -14,30 +14,30 @@ public class MedianAdapterTestSuite {
     public void publicationYearMedianTest() {
         //Given
         MedianAdapter medianAdapter = new MedianAdapter();
-        Set<Book> booksFromLibraryA = new HashSet<>();
-        booksFromLibraryA.add(new Book("Rowling",
+        Set<Book> books = new HashSet<>();
+        books.add(new Book("Rowling",
                 "Harry Potter I",
                 2000,
                 "AAA123"));
-        booksFromLibraryA.add(new Book("Rowling",
+        books.add(new Book("Rowling",
                 "Harry Potter II",
                 2002,
                 "AAA124"));
-        booksFromLibraryA.add(new Book("Rowling",
+        books.add(new Book("Rowling",
                 "Harry Potter III",
                 2004,
                 "AAA125"));
-        booksFromLibraryA.add(new Book("Rowling",
+        books.add(new Book("Rowling",
                 "Harry Potter IV",
                 2006,
                 "AAA126"));
 
-        booksFromLibraryA.add(new Book("Rowling",
+        books.add(new Book("Rowling",
                 "Harry Potter V",
                 2008,
                 "AAA127"));
         //When
-        int median = medianAdapter.publicationYearMedian(booksFromLibraryA);
+        int median = medianAdapter.publicationYearMedian(books);
         //Then
         assertEquals(2004, median);
     }
