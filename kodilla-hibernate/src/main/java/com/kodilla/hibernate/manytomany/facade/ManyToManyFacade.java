@@ -17,11 +17,11 @@ public class ManyToManyFacade {
     @Autowired
     private EmployeeDao employeeDao;
 
-    public List<Company> findCompanyNameLike(String nameLike) {
+    public List<Company> findCompanyLike(String nameLike) {
         return companyDao.findCompanyNameLike(nameLike);
     }
 
-    public List<Employee> findEmployeeNameLike(String nameLike) {
+    public List<Employee> findEmployeeLike(String nameLike) {
         return employeeDao.findEmployeeNameLike(nameLike);
     }
 }
