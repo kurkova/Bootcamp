@@ -6,18 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class FacebooktestingApp {
-    public static final String XPATH_WAIT_FOR = "//select[1]";
-    public static final String XPATH_SELECT = "//div[contains(@class, \"_5k_5\")]/span/span";
-    public static final String XPATH_SELECT_DAY = XPATH_SELECT + "/select[1]";
-    public static final String XPATH_SELECT_MONTH = XPATH_SELECT + "/select[2]";
-    public static final String XPATH_SELECT_YEAR = XPATH_SELECT + "/select[3]";
+public class FacebookTestingApp {
+    public static final String XPATH_SELECT_DAY = "//div[contains(@class,\"_5k_5\")]//select[@name=\"birthday_day\"]";
+    public static final String XPATH_SELECT_MONTH = "//div[contains(@class,\"_5k_5\")]//select[@name=\"birthday_month\"]";
+    public static final String XPATH_SELECT_YEAR = "//div[contains(@class,\"_5k_5\")]//select[@name=\"birthday_year\"]";
+
 
     public static void main(String[] args) {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.facebook.com");
 
-        while (!driver.findElement(By.xpath(XPATH_WAIT_FOR)).isDisplayed()) ;
+        while (!driver.findElement(By.xpath(XPATH_SELECT_DAY)).isDisplayed()) ;
 
         WebElement selectComboDay = driver.findElement(By.xpath(XPATH_SELECT_DAY));
         Select selectDay = new Select(selectComboDay);
