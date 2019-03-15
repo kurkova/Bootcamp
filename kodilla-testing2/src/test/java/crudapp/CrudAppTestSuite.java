@@ -26,6 +26,11 @@ public class CrudAppTestSuite {
         generator = new Random();
     }
 
+    @After
+    public void cleanApAfterTest() {
+        driver.close();
+    }
+
     private String createCrudAppTestTask() throws InterruptedException {
         final String XPATH_TASK_NAME = "//form[contains(@action,\"createTask\")]/fieldset[1]/input";
         final String XPATH_TASK_CONTENT = "//form[contains(@action,\"createTask\")]/fieldset[2]/textarea";
@@ -76,15 +81,15 @@ public class CrudAppTestSuite {
         driverTrello.findElement(By.id("password")).sendKeys("paulina1991");
         driverTrello.findElement(By.id("login")).submit();
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
-        driverTrello.findElements(By.xpath("//a[@class=\"board-tile\"]")).stream()
+        driverTrello.findElements(By.xpath("//a[contains(@class, \"board-tile\")]")).stream()
                 .filter(aHref -> aHref.findElements(By.xpath(".//div[@title=\"Kodilla Application\"]")).size() > 0)
                 .forEach(aHref -> aHref.click());
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
-        result = driverTrello.findElements(By.xpath("//span")).stream()
+        result = driverTrello.findElements(By.xpath(".//span[contains(@class, \"list-card-title\")]")).stream()
                 .filter(theSpan -> theSpan.getText().equals(taskName))
                 .collect(Collectors.toList())
                 .size() > 0;
@@ -95,8 +100,7 @@ public class CrudAppTestSuite {
     }
 
     private void removeTaskFromCrudApp(String taskName) throws InterruptedException {
-        driver.navigate().refresh();
-        while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
+        driver.switchTo().alert().dismiss();
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
                 .filter(anyForm ->
                         anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
@@ -106,7 +110,7 @@ public class CrudAppTestSuite {
                             theForm.findElement(By.xpath(".//button[@data-task-delete-button]"));
                     buttonDeleteCard.click();
                 });
-        Thread.sleep(5000);
+        Thread.sleep(10000);
     }
 
     @Test
@@ -115,10 +119,5 @@ public class CrudAppTestSuite {
         sendTestTaskToTrello(taskName);
         assertTrue(checkTaskExistsInTrello(taskName));
         removeTaskFromCrudApp(taskName);
-    }
-
-    @After
-    public void cleanApAfterTest() {
-        driver.close();
     }
 }
