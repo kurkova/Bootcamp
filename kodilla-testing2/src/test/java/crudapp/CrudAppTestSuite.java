@@ -100,7 +100,6 @@ public class CrudAppTestSuite {
     }
 
     private void removeTaskFromCrudApp(String taskName) throws InterruptedException {
-        driver.switchTo().alert().dismiss();
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
                 .filter(anyForm ->
                         anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
