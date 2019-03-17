@@ -69,6 +69,7 @@ public class CrudAppTestSuite {
                     buttonCreateCard.click();
                 });
         Thread.sleep(5000);
+
     }
 
     private boolean checkTaskExistsInTrello(String taskName) throws InterruptedException {
@@ -100,6 +101,7 @@ public class CrudAppTestSuite {
     }
 
     private void removeTaskFromCrudApp(String taskName) throws InterruptedException {
+        driver.switchTo().alert().accept();
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
                 .filter(anyForm ->
                         anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
