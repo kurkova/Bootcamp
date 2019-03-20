@@ -2,6 +2,7 @@ package crudapp;
 
 import config.WebDriverConfig;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class CrudAppTestSuite {
     private static final String BASE_URL = "https://kurkova.github.io";
@@ -101,7 +102,7 @@ public class CrudAppTestSuite {
     }
 
     private void removeTaskFromCrudApp(String taskName) throws InterruptedException {
-        driver.switchTo().alert().accept();
+        driver.switchTo().alert().dismiss();
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
                 .filter(anyForm ->
                         anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
@@ -114,11 +115,23 @@ public class CrudAppTestSuite {
         Thread.sleep(10000);
     }
 
+    private boolean checkRemovedTaskFromCrudApp(String taskName) {
+        boolean result = false;
+        result = driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
+                .filter(anyForm ->
+                        anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
+                                .getText().equals(taskName))
+                .collect(Collectors.toList())
+                .size() == 0;
+        return result;
+    }
+
     @Test
     public void shouldCreateTrelloCard() throws InterruptedException {
         String taskName = createCrudAppTestTask();
         sendTestTaskToTrello(taskName);
         assertTrue(checkTaskExistsInTrello(taskName));
         removeTaskFromCrudApp(taskName);
+        assertTrue(checkRemovedTaskFromCrudApp(taskName));
     }
 }
