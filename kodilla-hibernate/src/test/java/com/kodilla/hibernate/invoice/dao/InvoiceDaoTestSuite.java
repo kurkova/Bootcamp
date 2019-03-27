@@ -1,4 +1,4 @@
-/*package com.kodilla.hibernate.invoice.dao;
+package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.Invoice;
 import com.kodilla.hibernate.invoice.Item;
@@ -44,4 +44,3 @@ public class InvoiceDaoTestSuite {
         invoiceDao.delete(idInvoice);
     }
 }
-*/
