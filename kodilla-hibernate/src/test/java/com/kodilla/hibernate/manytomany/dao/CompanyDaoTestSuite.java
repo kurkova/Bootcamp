@@ -96,8 +96,8 @@ public class CompanyDaoTestSuite {
         companyDao.save(appleSoft);
 
         //When
-        List<Employee> lastName = employeeDao.findEmployeeNameLike("Walk");
-        List<Company> nameStartWith = companyDao.findCompanyNameLike("Sof");
+        List<Employee> lastName = employeeDao.findEmployeeLike("Walk");
+        List<Company> nameStartWith = companyDao.findCompanyLike("Sof");
 
         //Then
         Assert.assertEquals(1, lastName.size());
