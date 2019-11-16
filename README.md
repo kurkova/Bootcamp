@@ -8,14 +8,25 @@ tasks.
 
 ## Technologies & Frameworks
 
+### Frontend
+- [HTML]()
+- [CSS]()
+- [JQuery](https://jquery.com/)
 
+### Backend
+- [MySQL](https://www.mysql.com)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Hibernate](http://hibernate.org/)
+- [Lombok](https://projectlombok.org/)
+- [Gradle](https://gradle.org/)
+- [Swagger](https://swagger.io/)
 
+### Tests
+- [Gradle](https://gradle.org/)
+- [JUnit](https://maven.apache.org/)
+- [Mockito](http://site.mockito.org/)
+- [Selenium](https://www.seleniumhq.org/)
 
-
-
-
-
-
-During Bootcamp I worked with: Spring, Hibernate, Testing (Unit tests (JUnit, Mockito), integration tests (Selenium)), programming                                        principles (SOLID, DRY, Clean code), exceptions handling, lambda expression, stream, 
-                               design patterns (adapter, builder, decorator, facade, factory, observer, prototype, singleton, strategy)
-                               
+### Clean code principles 
+- [SOLID]()
+- [DRY]()
