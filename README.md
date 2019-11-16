@@ -6,6 +6,8 @@ of clean code such as SOLID or DRY. As a result of my studying, I created a “T
 tasks.
 
 
+## Technologies & Frameworks
+
 
 
 
